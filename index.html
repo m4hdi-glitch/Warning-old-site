@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Site Moved</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      color: red;
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .box {
+      max-width: 600px;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 15px;
+      color: red;
+    }
+
+    p {
+      font-size: 18px;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      background: red;
+      color: black;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      background: white;
+      color: black;
+    }
+
+    .small {
+      margin-top: 20px;
+      font-size: 14px;
+      color: gray;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="box">
+  <h1>SITE MOVED</h1>
+
+  <p>
+    This page has permanently moved to a new web address:
+    <br>
+    <b>mahdihasan.dev</b>
+  </p>
+
+  <a class="btn" id="goBtn">Go to New Site</a>
+
+  <p class="small">
+    You will be taken to the same page on the new site.
+  </p>
+</div>
+
+<script>
+  // keep user path (/science, /r/ssc, etc.)
+  const path = window.location.pathname;
+
+  const newUrl = "https://mahdihasan.dev" + path;
+
+  document.getElementById("goBtn").onclick = function () {
+    window.location.href = newUrl;
+  };
+</script>
+
+</body>
+</html>
